@@ -1,0 +1,13 @@
+[remap]
+
+importer="midi"
+type="MidiFileReader"
+path="res://.import/venture.mid-9091577e1424170838bf47fe0f095587.midstr"
+
+[deps]
+
+source_file="res://venture.mid"
+dest_files=[ "res://.import/venture.mid-9091577e1424170838bf47fe0f095587.midstr" ]
+
+[params]
+

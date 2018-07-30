@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MidiStream" inherits="AudioStream" category="Module">
+    <brief_description>
+    Class used for playing back SoundFont files with MIDI messages
+    </brief_description>
+    <description>
+    Class used for playing back SondFont files with MIDI messages. Can be selected as stream property of AudioStreamPlayer or loaded as a file.
+    Has functions for loading .sf2 or .mid files through script(if the files have not already been loaded in AudioStreamPlayer), playing notes, setting SoundFont presets,
+    tuning, volume and pitch wheel changes. Class can also load .mid files as a property and play them.
+    </description>
+    <methods>
+        <method name="set_filename">
+            <argument index="0" name="filename" type="String">
+            </argument>
+            <description>
+            Loads a .sf2 file from the project's directory using its name.
+            </description>
+        </method>
+  			<method name="set_midi_filename">
+            <argument index="0" name="filename" type="String">
+            </argument>
+            <description>
+              Loads a .mid file and plays it back.
+            </description>
+        </method>
+        <method name="get_stream_name">
+          <description>
+          </description>
+        </method>
+        <method name= "note_on">
+          <argument index="0" name="note" type="int">
+          </argument>
+          <argument index="1" name="velocity" type="float">
+          </argument>
+          <description>
+            Plays a note.
+          </description>
+        </method>
+        <method name="note_off">
+          <argument index="0" name="note" type="int">
+          </argument>
+          <description>
+            Stops a note.
+          </description>
+        </method>
+        <method name="set_preset">
+          <argument index="0" name="pr" type="int">
+          </argument>
+          <description>
+            Sets SoundFont preset number.
+          </description>
+        </method>
+        <method name="get_preset_name">
+          <argument index="0" name="pr" type="int">
+          </argument>
+          <description>
+            Returns the name of a preset number.
+          </description>
+        </method>
+        <method name="get_preset_count">
+          <description>
+            Returns the number of presets on the SoundFont file.
+          </description>
+        </method>
+        <method name="set_channel_pan">
+          <argument index="0" name="chn" type="int">
+          </argument>
+          <argument index="1" name="pan" type="float">
+          </argument>
+          <description>
+            Sets stereo panning value from 0.0 (left) to 1.0 (right) (default 0.5 center)
+          </description>
+        </method>
+        <method name="set_channel_tuning">
+          <argument index="0" name="chn" type="int">
+          </argument>
+          <argument index="1" name="tun" type="float">
+          </argument>
+          <description>
+            Sets tuning of all playing voices in semitones (default 0.0, standard (A440) tuning)
+          </description>
+        </method>
+        <method name="set_channel_volume">
+          <argument index="0" name="chn" type="int">
+          </argument>
+          <argument index="1" name="vol" type="float">
+          </argument>
+          <description>
+            Sets linear volume scale factor (default 1.0 full)
+          </description>
+        </method>
+        <method name="set_channel_pitchwheel">
+          <argument index="0" name="chn" type="int">
+          </argument>
+          <argument index="1" name="pw" type="float">
+          </argument>
+          <description>
+            Sets pitch wheel position 0 to 16383 (default 8192 unpitched)
+          </description>
+        </method>
+        <method name="set_channel_pitchrange">
+          <argument index="0" name="chn" type="int">
+          </argument>
+          <argument index="1" name="pr" type="float">
+          </argument>
+          <description>
+            Sets range of the pitch wheel in semitones (default 2.0, total +/- 2 semitones)
+          </description>
+        </method>
+    </methods>
+    <members>
+    </members>
+    <constants>
+    </constants>
+</class>

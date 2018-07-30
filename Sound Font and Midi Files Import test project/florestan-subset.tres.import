@@ -1,0 +1,13 @@
+[remap]
+
+importer="sound_font"
+type="MidiStream"
+path="res://.import/florestan-subset.sf2-584521029f4e8116aa094669c47253b2.sf2str"
+
+[deps]
+
+source_file="res://florestan-subset.sf2"
+dest_files=[ "res://.import/florestan-subset.sf2-584521029f4e8116aa094669c47253b2.sf2str" ]
+
+[params]
+

@@ -1,0 +1,592 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=1]
+[ext_resource path="res://images.png" type="Texture" id=2]
+[ext_resource path="res://OptionButton.gd" type="Script" id=3]
+
+[sub_resource type="MidiStream" id=1]
+
+data = PoolByteArray(  )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" index="0"]
+stream = SubResource( 1 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+stream_paused = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 1 )
+
+[node name="images" type="Sprite" parent="." index="0"]
+position = Vector2( 501.463, 343.623 )
+scale = Vector2( 2.6383, 1.48303 )
+texture = ExtResource( 2 )
+
+[node name="Area2DKey1" type="Area2D" parent="images" index="0"]
+position = Vector2( -85.1992, 13.5617 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey1" index="0"]
+position = Vector2( 0.104092, 1.87402 )
+scale = Vector2( 0.968487, 1.01429 )
+build_mode = 0
+polygon = PoolVector2Array( -0.190804, -12.5989, -0.0856552, -38.9509, -6.18375, -38.9509, -6.28889, 9.59225, 6.22272, 9.03751, 6.11758, -9.54761, -0.295937, -9.54761 )
+
+[node name="Area2DKey2" type="Area2D" parent="images" index="1"]
+position = Vector2( -81.1501, -9.53314 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey2" index="0"]
+position = Vector2( 0.301117, 0.794434 )
+build_mode = 0
+polygon = PoolVector2Array( -4.15937, 12.1642, 3.36847, 12.1642, 3.51903, -15.2435, -4.15938, -15.2435 )
+
+[node name="Area2DKey3" type="Area2D" parent="images" index="2"]
+position = Vector2( -71.8156, 13.108 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey3" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -5.81551, 12.1643, 4.87403, 12.5615, 6.68071, 12.1643, 6.98183, -8.88806, 2.91679, -9.6825, 2.61568, -37.4875, -5.21328, -37.4875, -5.21328, -9.28528, -6.56828, -8.88806 )
+
+[node name="Area2DKey4" type="Area2D" parent="images" index="3"]
+position = Vector2( -66.6967, -7.14984 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey4" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -1.75046, 8.58932, 5.32572, 8.58932, 5.32572, -18.024, -2.05157, -18.024 )
+
+[node name="Area2DKey5" type="Area2D" parent="images" index="4"]
+position = Vector2( -57.6633, 12.3137 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey5" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -6.41774, 12.9587, -0.847137, 12.5615, 5.47626, 11.3698, 5.32571, -7.69647, 4.57292, -10.8742, 4.2718, -37.0903, -3.25603, -37.0903, -3.55714, -10.477, -3.40659, -9.28534, -6.8694, -7.69647 )
+
+[node name="Area2DKey6" type="Area2D" parent="images" index="5"]
+position = Vector2( -49.2321, -9.53311 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey6" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -3.61725, 12.9586, 2.55557, 13.3559, 2.85669, -15.6408, -3.76781, -16.038 )
+
+[node name="Area2DKey7" type="Area2D" parent="images" index="6"]
+position = Vector2( -44.3626, 15.1179 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey7" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -7.12059, 11.475, 5.07913, 9.52429, 5.26398, -39.7309, -1.57526, -40.7062, -1.39041, -9.9827, -7.30544, -10.4704 )
+
+[node name="Area2DKey8" type="Area2D" parent="images" index="7"]
+position = Vector2( -32.975, 15.6705 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey8" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -4.90131, 9.73099, 7.30194, 9.73099, 7.22058, -10.445, 2.502, -11.089, 2.502, -40.0652, -5.30807, -40.2798 )
+
+[node name="Area2DKey9" type="Area2D" parent="images" index="8"]
+position = Vector2( -26.3653, -8.73541 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey9" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -3.78896, 12.6772, 3.20093, 12.6772, 3.07829, -16.4409, -3.66632, -16.1173 )
+
+[node name="Area2DKey10" type="Area2D" parent="images" index="9"]
+position = Vector2( -19.3755, 11.0002 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey10" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -5.73987, 13.5889, 6.40045, 13.5889, 6.40045, -6.47015, 4.0705, -6.79367, 4.31575, -35.9117, -3.4099, -35.9117, -3.53253, -6.47015, -5.8625, -6.47015, -5.8625, 13.5889 )
+
+[node name="Area2DKey11" type="Area2D" parent="images" index="10"]
+position = Vector2( -11.0907, -9.75351 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey11" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -3.75005, 12.9422, 3.60527, 13.117, 3.40648, -15.5542, -3.48499, -15.3794 )
+
+[node name="Area2DKey12" type="Area2D" parent="images" index="11"]
+position = Vector2( -5.38837, 12.6871 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey12" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -7.13702, 13.2307, 5.36595, 13.3831, 5.62285, -37.5007, -2.08446, -37.5007, -1.74191, -8.85954, -7.05139, -8.4025 )
+
+[node name="Area2DKey13" type="Area2D" parent="images" index="12"]
+position = Vector2( 6.44987, 14.4491 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey13" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -5.26416, 10.4803, 7.77312, 10.2932, 7.35257, -9.15912, 1.14934, -9.72023, 1.04419, -39.2728, -6.00014, -39.2728 )
+
+[node name="Area2DKey14" type="Area2D" parent="images" index="13"]
+position = Vector2( 11.4798, -10.3843 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey14" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -3.61475, 14.5418, 3.59676, 14.3814, 3.41647, -14.9653, -3.70488, -14.9653 )
+
+[node name="Area2DKey15" type="Area2D" parent="images" index="14"]
+position = Vector2( 20.9697, 14.8346 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey15" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -6.29117, 8.87062, -4.96272, 10.8963, 4.52609, 10.8963, 6.23409, 9.37703, 6.13921, -10.8796, 2.81812, -10.8796, 2.81812, -39.5765, -5.53206, -39.7453, -5.34229, -10.7108, -6.57584, -9.86676 )
+
+[node name="Area2DKey16" type="Area2D" parent="images" index="15"]
+position = Vector2( 27.61, -10.7769 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey16" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -3.47144, 13.9495, 3.02245, 14.1853, 3.02245, -14.1066, -3.40518, -14.1066 )
+
+[node name="Area2DKey17" type="Area2D" parent="images" index="16"]
+position = Vector2( 34.6488, 13.2948 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey17" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -6.84973, 10.7997, -4.59674, 12.6858, 4.61397, 12.45, 6.80069, 10.3281, 6.53561, -8.88678, 4.81276, -9.71198, 4.74648, -38.0039, -3.66905, -38.3575, -3.73531, -9.71198, -7.04851, -9.12254 )
+
+[node name="Area2DKey18" type="Area2D" parent="images" index="17"]
+position = Vector2( 42.7548, -8.70444 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey18" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -3.0135, 11.6264, -1.47954, 12.8392, 3.80408, 12.3339, 3.52002, -16.5721, -3.29756, -16.5721 )
+
+[node name="Area2DKey19" type="Area2D" parent="images" index="18"]
+position = Vector2( 48.2008, 15.0123 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey19" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -6.53816, 8.46999, -5.84259, 10.8074, 3.66376, 10.9449, 6.21422, 8.745, 5.90508, -40.065, -1.74637, -40.065, -1.35991, -11.1915, -6.22902, -10.504 )
+
+[node name="Area2DKey20" type="Area2D" parent="images" index="19"]
+position = Vector2( 60.579, 14.3001 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey20" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -6.03946, 8.60202, -4.41235, 11.3519, 5.10617, 10.9177, 6.48921, 9.90459, 6.73326, -9.63388, 1.36386, -10.2128, 1.44519, -39.5928, -5.87675, -39.4481 )
+
+[node name="Area2DKey21" type="Area2D" parent="images" index="20"]
+position = Vector2( 65.9788, -9.11794 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey21" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -3.7106, 12.4816, 3.93677, 12.3369, 3.85544, -16.0301, -3.62926, -16.0301 )
+
+[node name="Area2DKey22" type="Area2D" parent="images" index="21"]
+position = Vector2( 74.4589, 12.9896 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey22" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -6.76459, 10.3809, -5.90823, 12.5137, 4.71072, 12.6661, 5.90964, 10.9903, 5.90964, -8.8148, 3.76871, -8.96715, 3.59744, -37.6083, -4.36676, -37.7607, -4.28113, -9.42421, -6.93588, -9.11949 )
+
+[node name="Area2DKey23" type="Area2D" parent="images" index="22"]
+position = Vector2( 82.6395, -9.75018 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey23" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -4.15491, 13.1632, 3.03857, 13.1632, 2.95294, -15.3256, -4.32617, -15.3256 )
+
+[node name="Area2DKey24" type="Area2D" parent="images" index="23"]
+position = Vector2( 87.1782, 12.6448 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="images/Area2DKey24" index="0"]
+build_mode = 0
+polygon = PoolVector2Array( -6.46707, 11.0304, -5.18253, 12.5538, 5.26517, 12.7062, 6.54971, 11.3351, 6.29279, -38.0253, -1.15759, -37.8729, -0.900696, -9.53644, -1.58578, -8.31766, -6.38144, -8.31766 )
+
+[node name="OptionButton" type="OptionButton" parent="." index="1"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 365.474
+margin_top = 415.526
+margin_right = 634.474
+margin_bottom = 435.526
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+script = ExtResource( 3 )
+
+[node name="SpinBoxVolume" type="SpinBox" parent="." index="2"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 254.001
+margin_top = 466.0
+margin_right = 328.001
+margin_bottom = 490.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 1.0
+step = 0.1
+page = 0.0
+value = 0.7
+exp_edit = false
+rounded = false
+allow_greater = false
+allow_lesser = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Label" type="Label" parent="." index="3"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 259.001
+margin_top = 448.0
+margin_right = 308.001
+margin_bottom = 462.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Volume"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SpinBox2Pan" type="SpinBox" parent="." index="4"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 673.027
+margin_top = 467.513
+margin_right = 747.027
+margin_bottom = 491.513
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 1.0
+step = 0.1
+page = 0.0
+value = 0.5
+exp_edit = false
+rounded = false
+allow_greater = false
+allow_lesser = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Label2" type="Label" parent="." index="5"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 643.0
+margin_top = 454.0
+margin_right = 768.0
+margin_bottom = 468.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Pan(0-1, 0.5 center)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SpinBoxTuning" type="SpinBox" parent="." index="6"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 467.864
+margin_top = 468.0
+margin_right = 541.864
+margin_bottom = 492.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 10.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+allow_greater = false
+allow_lesser = false
+editable = true
+prefix = ""
+suffix = ""
+
+[connection signal="input_event" from="images/Area2DKey1" to="." method="_on_Area2DKey1_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey1" to="." method="_on_Area2DKey1_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey1" to="." method="_on_Area2DKey1_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey2" to="." method="_on_Area2DKey2_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey2" to="." method="_on_Area2DKey2_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey2" to="." method="_on_Area2DKey2_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey3" to="." method="_on_Area2DKey3_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey3" to="." method="_on_Area2DKey3_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey3" to="." method="_on_Area2DKey3_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey4" to="." method="_on_Area2DKey4_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey4" to="." method="_on_Area2DKey4_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey4" to="." method="_on_Area2DKey4_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey5" to="." method="_on_Area2DKey5_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey5" to="." method="_on_Area2DKey5_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey5" to="." method="_on_Area2DKey5_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey6" to="." method="_on_Area2DKey6_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey6" to="." method="_on_Area2DKey6_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey6" to="." method="_on_Area2DKey6_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey7" to="." method="_on_Area2DKey7_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey7" to="." method="_on_Area2DKey7_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey7" to="." method="_on_Area2DKey7_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey8" to="." method="_on_Area2DKey8_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey8" to="." method="_on_Area2DKey8_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey8" to="." method="_on_Area2DKey8_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey9" to="." method="_on_Area2DKey9_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey9" to="." method="_on_Area2DKey9_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey9" to="." method="_on_Area2DKey9_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey10" to="." method="_on_Area2DKey10_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey10" to="." method="_on_Area2DKey10_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey10" to="." method="_on_Area2DKey10_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey11" to="." method="_on_Area2DKey11_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey11" to="." method="_on_Area2DKey11_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey11" to="." method="_on_Area2DKey11_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey12" to="." method="_on_Area2DKey12_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey12" to="." method="_on_Area2DKey12_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey12" to="." method="_on_Area2DKey12_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey13" to="." method="_on_Area2DKey13_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey13" to="." method="_on_Area2DKey13_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey13" to="." method="_on_Area2DKey13_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey14" to="." method="_on_Area2DKey14_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey14" to="." method="_on_Area2DKey14_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey14" to="." method="_on_Area2DKey14_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey15" to="." method="_on_Area2DKey15_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey15" to="." method="_on_Area2DKey15_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey15" to="." method="_on_Area2DKey15_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey16" to="." method="_on_Area2DKey16_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey16" to="." method="_on_Area2DKey16_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey16" to="." method="_on_Area2DKey16_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey17" to="." method="_on_Area2DKey17_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey17" to="." method="_on_Area2DKey17_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey17" to="." method="_on_Area2DKey17_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey18" to="." method="_on_Area2DKey18_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey18" to="." method="_on_Area2DKey18_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey18" to="." method="_on_Area2DKey18_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey19" to="." method="_on_Area2DKey19_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey19" to="." method="_on_Area2DKey19_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey19" to="." method="_on_Area2DKey19_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey20" to="." method="_on_Area2DKey20_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey20" to="." method="_on_Area2DKey20_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey20" to="." method="_on_Area2DKey20_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey21" to="." method="_on_Area2DKey21_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey21" to="." method="_on_Area2DKey21_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey21" to="." method="_on_Area2DKey21_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey22" to="." method="_on_Area2DKey22_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey22" to="." method="_on_Area2DKey22_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey22" to="." method="_on_Area2DKey22_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey23" to="." method="_on_Area2DKey23_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey23" to="." method="_on_Area2DKey23_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey23" to="." method="_on_Area2DKey23_mouse_exited"]
+[connection signal="input_event" from="images/Area2DKey24" to="." method="_on_Area2DKey24_input_event"]
+[connection signal="mouse_entered" from="images/Area2DKey24" to="." method="_on_Area2DKey24_mouse_entered"]
+[connection signal="mouse_exited" from="images/Area2DKey24" to="." method="_on_Area2DKey24_mouse_exited"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="value_changed" from="SpinBoxVolume" to="." method="_on_SpinBox_value_changed"]
+[connection signal="value_changed" from="SpinBox2Pan" to="." method="_on_SpinBox2Pan_value_changed"]
+[connection signal="value_changed" from="SpinBoxTuning" to="." method="_on_SpinBoxTuning_value_changed"]
