@@ -12,3 +12,5 @@ The feature works with SoundFont and MIDI files which the user can import or loa
 
 Since my project is to include a new feature in Godot, after discussion with my mentors we decided that the best way to approach it is to include the library and my code as a custom module for the engine. This means that in order to see my code working, all that needs to be done is to simply copy the TSF folder from this repository into the modules folder of Godot and then compile the engine.
 
+![](C:\Users\Daniel Matarov\Documents\GODOTPROJECTS\blog post pics\resources.png)
+
