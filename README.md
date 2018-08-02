@@ -12,5 +12,19 @@ The feature works with SoundFont and MIDI files which the user can import or loa
 
 Since my project is to include a new feature in Godot, after discussion with my mentors we decided that the best way to approach it is to include the library and my code as a custom module for the engine. This means that in order to see my code working, all that needs to be done is to simply copy the TSF folder from this repository into the modules folder of Godot and then compile the engine.
 
-![](https://i.imgur.com/sYx4z3m.png)
+
+
+## How does the code work?
+
+The main class for this project is called MidiStream. It inherits AudioStream which is the base class for audio in Godot, while also adding functions from the TinySoundFont library. TSF however does not have any playback on its own, it only stores data to a buffer which can be read by an audio driver. For this purpose there is a MidiStreamPlayback class which inherits AudioStreamPlayback. In this class there is a mix function which reads the audio data and sends it to Godot's AudioFrame. 
+
+The way TSF deals with data is by storing it on a pointer which stores the soundfont data and is used in every function. At the end a render function is called to write the data to a buffer. For this project the render function is called inside the mix function of MidiStreamPlayback. 
+
+To be able to play anything however, a soundfont(.sf2) file needs to be loaded. There are two ways of doing this. One is through a public function that can be called through GDScript. The function, `set_filename(constString&filename)`takes the name of a .sf2 file in a Godot project's directory and loads it to `tsf_pointer` , then checks if the pointer has been loaded and sets TSF's output settings, which are number of channels(stereo or mono), sample rate and gain.
+
+The other way of loading .sf2 files happens by using a ResourceImporterSfont class, which inherits ResourceImporter. This class has an import function which calls on some of Godot's FileAccess functions. It also creates an instance of MidiStream and calls on a `set_data` function that uses a TSF function(`tsf_load_memory`) to load sound data from memory and assigns it to the`tsf_pointer` .
+
+
+
+
 
