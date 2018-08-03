@@ -13,10 +13,17 @@ func _ready():
 	
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _input(event):
+	if event.is_class("InputEventMIDI"):
+			stream.note_on(event.get_pitch(), event.get_velocity()/127.0)
+	pass
+
+func _input2(event):
+	if event.is_class("InputEventMIDI"):
+		if event == 8:
+			stream.note_off(event.get_pitch())
+	pass
+
 func _on_OptionButton_item_selected(p):
 	stream.set_preset(p)
 	pass # replace with function body
