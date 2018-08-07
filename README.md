@@ -30,5 +30,23 @@ The way `midi file playback` works is by counting the samples which need to be p
 
 Loading MIDI files through `ResourceImpoterMIDI` works slightly different than it does with .sf2 files. They have a separate Resource class called `MidiFileReader` which handles the loading of the files with `set_data` and `get_data` functions by using `tml_load_memory` to load the data to a pointer. The pointer is then called in MidiStream through a set_midi_file function and assigned to midi_pointer in MIDI stream. The idea of this  is to be able to load the .mid files through the editor, so these functions are added as an inspector property for MidiStream. 
 
+## How do I use this feature? 
+
+As mentioned previously 
+
+
+
+## What challenges did I encounter? 
+
+When I first applied for this project I was pretty much a beginner in the world of programming, my experience was limited to a couple of years of audio programming at university where I learned a little bit of object based programming. So needless to say I had a lot to learn before and during the coding part of GSOC. 
+
+I started with learning how Godot is structured so I can find out where in the hierarchy my code will fit. With my mentors we decided, as previously mentioned that the code will be a module. Next I tried to learn how to create custom modules for Godot, by following some of the instructions that I found in the engine's documentation web page. I encountered some issues with that however because parts of the documentation were fairly outdated, but with the help of my mentors I managed to understand how most of it works. Needless to say, I also had to learn how to make custom AudioStream modules and learn how audio works in Godot as a whole. 
+
+My first task was to be able to play a MIDI note by pressing a button in a Godot project. That was in my opinion the hardest part of the project because I didn't quite understand how to connect the data from TSF to the engine's AudioFrame. Fortunately, with the help of my mentors I managed to do that after just two weeks of coding and moved on to adding more TSF functions and implementing MIDI file playback. For the first milestone I created a couple of Test projects, one with a Piano roll and another project that played a MIDI file when a button is pressed. 
+
+Being quite new to programming, one of the main issues I encountered was my code being very messy and understanding how to include headers in .h and .cpp files. It wasn't until I tried creating ResourceImporter classes for MIDI files and SoundFont files that these issues became apparent, where my code was mostly correct, but because of my header includes being in the wrong places, my code wouldn't compile, or if it did it simply didn't work. Fortunately I now have a better understanding on that topic and programming as a whole due to participating in the program, however there is a lot more to learn and I will try to continue to contribute to Godot's code throughout the year and potentially apply for Google Summer of Code next year as well!
+
+
+
 
 
