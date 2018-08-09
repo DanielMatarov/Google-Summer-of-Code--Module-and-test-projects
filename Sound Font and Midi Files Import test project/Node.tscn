@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://florestan-subset.tres" type="AudioStream" id=1]
+[ext_resource path="res://florestan-subset.sf2" type="AudioStream" id=1]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=2]
 
 [node name="Node" type="Node" index="0"]

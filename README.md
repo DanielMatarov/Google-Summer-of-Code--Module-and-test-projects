@@ -38,9 +38,23 @@ As mentioned previously, you need SoundFont files to be able to play any audio u
 
 You can also see the MIDI file venture.mid in that panel as well. Just like with .sf2 files, all that needs to be done is to simply place them in the project's directory.
 
-Thanks to the ResourceImporter classes for both .sf2 and .mid files 
+Thanks to the ResourceImporter classes for both .sf2 and .mid files, they can simply be dragged from the resource panel to an AudioStreamPlayer node's Stream property. 
 
+![](https://i.imgur.com/GXKH7Gs.png)      
 
+![](https://i.imgur.com/pEp1ncz.png)
+
+On these images you can see both .sf2 and .mid files loaded in the inspector. 
+
+In the class documentation for MidiStream, the functions that can be used in GDscript are explained, and also the code is well commented and easy to read. 
+
+Similarly to how audio works in Godot already, you can use node signals to trigger MidiStream functions and play audio. For example you can use a button's pressed() signal to trigger a note_on(note, velocity) function and play sound. 
+
+![](https://i.imgur.com/jTD0Gi6.png)
+
+When .mid files are loaded, they will play as soon as AudioStreamPlayer's play() function is triggered.
+
+This is all you need to know to start using this feature, and there are also some more examples in the test projects I have included in this repository. 
 
 ## What challenges did I encounter? 
 
