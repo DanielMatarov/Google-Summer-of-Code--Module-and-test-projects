@@ -32,7 +32,13 @@ Loading MIDI files through `ResourceImpoterMIDI` works slightly different than i
 
 ## How do I use this feature? 
 
-As mentioned previously 
+As mentioned previously, you need SoundFont files to be able to play any audio using MIDI messages. To begin, you need to place a .sf2 file in your project's directory, and that will automatically detect the file and it will show up in the resources panel in Godot's editor, as shown in the image below. 
+
+![https://i.imgur.com/t4moFMc.png]()
+
+You can also see the MIDI file venture.mid in that panel as well. Just like with .sf2 files, all that needs to be done is to simply place them in the project's directory.
+
+Thanks to the ResourceImporter classes for both .sf2 and .mid files 
 
 
 
@@ -45,6 +51,16 @@ I started with learning how Godot is structured so I can find out where in the h
 My first task was to be able to play a MIDI note by pressing a button in a Godot project. That was in my opinion the hardest part of the project because I didn't quite understand how to connect the data from TSF to the engine's AudioFrame. Fortunately, with the help of my mentors I managed to do that after just two weeks of coding and moved on to adding more TSF functions and implementing MIDI file playback. For the first milestone I created a couple of Test projects, one with a Piano roll and another project that played a MIDI file when a button is pressed. 
 
 Being quite new to programming, one of the main issues I encountered was my code being very messy and understanding how to include headers in .h and .cpp files. It wasn't until I tried creating ResourceImporter classes for MIDI files and SoundFont files that these issues became apparent, where my code was mostly correct, but because of my header includes being in the wrong places, my code wouldn't compile, or if it did it simply didn't work. Fortunately I now have a better understanding on that topic and programming as a whole due to participating in the program, however there is a lot more to learn and I will try to continue to contribute to Godot's code throughout the year and potentially apply for Google Summer of Code next year as well!
+
+
+
+#### Conclusions and how this project experience will help me in my future professional career
+
+As someone who aspires to work as a freelancer in the game and film audio field, working on this project helped me understand a lot about how audio works in game engines, and also helped me reinforce and learn lots of new programming skills that I likely wouldn't have learned otherwise. 
+
+A big part of the project was working in the context of a bigger project, which is Godot and understanding how to connect my parts to the bigger picture was an interesting experience. If I end up pursuing a career as a freelance programmer, that will often be the case and I feel like this experience will be a very big plus in my future job search, because I now not only have better skills in programming but I have also learned to use git and work in bigger projects which will be sought by future employers. Another useful skill was working in my own time and building the discipline to do it consistently and every day, which is a very important skill for freelancers.
+
+As a whole working for Godot during Google Summer of code was a very positive experience that I believe will be very useful for my future. I am looking forward to next year's GSOC for which I will definitely apply, and quite likely will try to find another Godot project that will suit my skills and interests! 
 
 
 
