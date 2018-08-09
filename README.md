@@ -34,7 +34,7 @@ Loading MIDI files through `ResourceImpoterMIDI` works slightly different than i
 
 As mentioned previously, you need SoundFont files to be able to play any audio using MIDI messages. To begin, you need to place a .sf2 file in your project's directory, and that will automatically detect the file and it will show up in the resources panel in Godot's editor, as shown in the image below. 
 
-![https://i.imgur.com/t4moFMc.png]()
+![](https://i.imgur.com/t4moFMc.png)
 
 You can also see the MIDI file venture.mid in that panel as well. Just like with .sf2 files, all that needs to be done is to simply place them in the project's directory.
 
