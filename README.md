@@ -56,6 +56,24 @@ When .mid files are loaded, they will play as soon as AudioStreamPlayer's play()
 
 This is all you need to know to start using this feature, and there are also some more examples in the test projects I have included in this repository. 
 
+## Test projects 
+
+To be able to prove that my features work, I also had to create some test projects which display the functionality of my code. 
+
+The biggest of these projects was a piano roll that plays MIDI notes and also has some other functions for different sounds(presets), volume, tuning and panning. You can play the notes by clicking on the piano image and a corresponding note will play. 
+
+![](https://i.imgur.com/VdeYEl1.png)
+
+To achieve this, particularly the piano roll, I started with downloading a generic piano roll image from the internet and placed it in Godot's editor as an image node. For every key I created an Area2D node and connected its input_event(), mouse_entered() and mouse_exited() signals to my AudioStreamPlayer node. 
+
+![](https://i.imgur.com/PENHYVs.png)
+
+The image above shows the script that operates the piano roll for each Area2D node. The first part simply plays a note when when the mouse is pressed over the area, and plays a note off when the InputEventMouseButton is anything but pressed. 
+
+That was the first stage of this test project. My mentors, however, mentioned that the test project could be improved by adding a functionality for turning notes off when the mouse exits the area without being released, or triggering notes when the mouse is already pressed but enters the area, and that is the second part of the code on the image. 
+
+The other test project in this repository plays an imported MIDI file as a proof that the ResourceImporters for sound fonts and MIDI files work. To play this the project simply needs to be compiled by the Godot editor and that will play the MIDI file. The process for doing this is explained in the previous paragraph, by importing the two files in the way explained earlier.
+
 ## What challenges did I encounter? 
 
 When I first applied for this project I was pretty much a beginner in the world of programming, my experience was limited to a couple of years of audio programming at university where I learned a little bit of object based programming. So needless to say I had a lot to learn before and during the coding part of GSOC. 
